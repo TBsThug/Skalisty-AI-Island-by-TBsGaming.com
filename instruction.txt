@@ -4,118 +4,40 @@ Thug at TBsGaming.com
 thug@tbsgaming.com
 tbsgaming.teamspeak3.com
 UPDATED 7/10/2015
-
-******************************This script is made for Chernarus 1.0.5.1***************************************
-
-
+UPDATE  2/19/2018
+******************************This script is updated for Chernarus 1.0.6.2***************************************
 
  IF YOU HAVE A BRIDGE THAT GOES TO THE ISLAND AND ITS NOT THE ONE INCLUDED, YOU MITE WANT TO REMOVE IT.
  Put the lines below in the dayz_server\init\server_functions.sqf at the very bottom*/
 
-[] execVM "\z\addons\dayz_server\addons\skalisty_island_lottery.sqf";				/*Use this one in WAI 2.0 or lower or WAI 2.1 or higher, MAIN PRIZE*/
+[]execVM "\z\addons\dayz_server\buildings\skalisty_island_bridge.sqf";	//if you are going to use the wall around the island, use this bridge
 
-[]execVM "\z\addons\dayz_server\buildings\skalisty_island_bridge.sqf";				/*Use this one in WAI 2.0 or lower or WAI 2.1 or higher*/
+[]execVM "\z\addons\dayz_server\addons\skalisty_island_castle.sqf";	//this is the castle
 
-[]execVM "\z\addons\dayz_server\buildings\skalisty_island_castle.sqf";				/*Use this one in WAI 2.0 or lower or WAI 2.1 or higher*/
+[]execVM "\z\addons\dayz_server\addons\skalisty_island_road.sqf";	//the road leading to the castle gate
 
-[]execVM "\z\addons\dayz_server\buildings\skalisty_island_road.sqf";				/*Use this one in WAI 2.0 or lower or WAI 2.1 or higher*/
+[]execVM "\z\addons\dayz_server\addons\skalisty_island_wall.sqf";	//this is the wall going around the island, if you use this there are 2 entrances
 
-[]execVM "\z\addons\dayz_server\buildings\skalisty_island_wall.sqf";					/*Use this one in WAI 2.0 or lower or WAI 2.1 or higher*/
+[]execVM "\z\addons\dayz_server\addons\spawn_box_skalisty_island.sqf";	//the random boxes have to be reworked because of epoch 1.0.6.2 update
 
-[]execVM "\z\addons\dayz_server\addons\spawn_box_skalisty_island.sqf";		/*FOR WAI 2.1 OR HIGHER ONLY, IF YOU ARE ONLY RUNNING EPOCH--DO NOT USE*/
+[] execVM "\z\addons\dayz_server\addons\skalisty_island_lottery.sqf";	//The lotto boxes have to be reworked because of the epoch 1.0.6.2 update
 
-
-
-/*If you dont have a addons folder in the dayz_server root, add one and put the skalisty_island_lottery.sqf and spawn_box_skalisty_island.sqf in it, REMEMBER THE SPAWN BOX IS ONLY 2.1 OR HIGHER
-
-If you dont have a buildings folder in the dayz_server root, add one and put the
-skalisty_island_bridge.sqf, skalisty_island_castle.sqf, skalisty_island_road.sqf and skalisty_island_wall.sqf in it*/
-
-/*IF YOU HAVE THE WAI VERSION 2.1 OR HIGHER, THE AI AND M2 FILES YOU WILL NEED WILL BE AT THE NEXT PAGE BREAK, WHICH LOOKS LIKE THIS --> *********************************************
-*/
-/*WAI 2.0 OR LOWER WILL NEED THE FOLLOWING
-Just copy and paste to dayz_server\WAI\CustomSpawns.sqf*/
-
-/*Skalisty Island Ai Spawn Points for M2*/
-[[[13757, 2855.6951, 0.0001411438],[13581.159, 3095.7595, -0.00020980835],[13672.707, 2923.532, -1.5258789e-005],[13757.219, 2913.2258, 0.00010681152],[13803.734, 2948.77, 9.9182129e-005]],"M2StaticMG",2,"Bandit2_DZ",1,3,"","Random"] call spawn_static; //Skalisty Island ground weapons//
-[[[13307.787, 2742.4548, 5.7220459e-005],[13473.531, 3343.7896, -2.2888184e-005],[13308.451, 3241.7668, 2.6702881e-005],[13631.521, 3237.97, 0.00017929077],[14165.316, 2696.0239, 8.2969666e-005]],"M2StaticMG",2,"Bandit2_DZ",1,3,"","Random"] call spawn_static;   //Skalisty Island ground weapons
-[[[13720.18, 2841.2844, -4.196167e-005],[14085.578, 2942.03, 0.00035858154],[13598.758, 2932.2224, -0.0002784729],[12980.869, 3208.0649, 4.5776367e-005],[13526.065, 3475.8076, 1.0967255e-005]],"M2StaticMG",2,"Bandit2_DZ",1,3,"","Random"] call spawn_static;   //Skalisty Island ground weapons
-[[[13771.2, 2969.66, 0.0014648], [13689.4, 2980.61, 0.00135422], [13731.9, 2897.92, 8.39783]],"M2StaticMG",2,"Bandit2_DZ",1,3,"","Random"] call spawn_static;   //Skalisty Island ground weapons
-
-
-/*Skalisty Islansd AI Spawn Points for ground troops*/
-[[13671.355, 2892.8167, -1.5258789e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13687.221, 2931.012, 2.6702881e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;
-[[13741.079, 2945.6494, -9.5367432e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;
-[[13691.315, 2857.7407, -3.8146973e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13729.353, 2856.2568, 3.4332275e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13730.628, 2812.7852, -0.00022125244],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;
-[[13642.995, 2837.9001, 0.0001411438],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;
-[[13829.32, 2923.4414, 6.4849854e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;
-[[13895.181, 2988.3088, 0.00019454956],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;
-[[13955.636, 3029.5244, 0.00057220459],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[14070.653, 2891.0085, -0.00090026855],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[14142.604, 2789.1985, 0.00060462952],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[14155.192, 2691.3687, 0.0002155304],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13990.835, 2788.1887, 0.00024223328],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;  
-[[13870.401, 2810.1841, -1.9073486e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;   
-[[13563.453, 2869.0381, 3.0517578e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13510.406, 2995.7441, 0.0013637543],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13428.791, 2792.6438, 4.7683716e-006],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13343.02, 2788.208, 0.0003452301],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13279.515, 2737.9275, -4.4822693e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13353.722, 2719.4685, 0.00062465668],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13419.333, 2747.3875, 0.00021457672],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13382.635, 2774.623, 0.00018024445],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13571.933, 3323.9666, 0.00010681152],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;   
-[[13485.479, 3338.3132, 9.1552734e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13487.625, 3380.8669, 0.00036621094],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13408.095, 3336.6536, -0.00019073486],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13377.609, 3288.2527, -0.0002784729],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13245.426, 3362.8286, -0.00010251999],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13214.415, 3246.9207, -0.0001335144],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;   
-[[13140.325, 3271.8738, 0.00052642822],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;   
-[[13064.684, 3258.4734, -5.7220459e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;  
-[[13112.573, 3197.2249, -0.00059127808],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;  
-[[13033.765, 3154.4763, 0.00037384033],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13109.765, 3132.3279, 0.00085258484],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13372.726, 3103.7449, 0.00038146973],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13467.485, 3107.6912, 9.6321106e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13472.39, 3004.0212, -0.00060558319],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13476.838, 2875.9968, -7.8201294e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13409.714, 2819.4358, 0.00013065338],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;  
-[[13991.87, 2889.8601, 8.9645386e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group;   
-[[13576.669, 3073.3196, -0.00047302246],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13490.565, 3235.3242, 0.00017547607],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-[[13126.788, 3895.324, -1.5258789e-005],4,2,"Random",4,"","Bandit2_DZ","Random"] call spawn_group; 
-
-----------------------------------------------------------------------------------------------
-/*Skalisty Island Weapon Crates FOR WAI 2.0 OR LOWER
-copy the following to the StaticAmmoBoxes.sqf which is in the WAI\missons folder*/
-
-_box17 = createVehicle ["BAF_VehicleBox",[13599.131, 3144.4458, -9.3460083e-005], [], 0, "CAN_COLLIDE"];
-[_box17] call spawn_ammo_box;
-
-_box18= createVehicle ["BAF_VehicleBox",[13405.722, 2780.4429, 5.6266785e-005], [], 0, "CAN_COLLIDE"];
-[_box18] call spawn_ammo_box;
-
-_box19 = createVehicle ["BAF_VehicleBox",[14111.692, 2811.4993, 2.0980835e-005], [], 0, "CAN_COLLIDE"];
-[_box19] call spawn_ammo_box;
-
-/*DONT USE WHAT IS BELOW IF YOU ARE USING WAI 2.0 OR LOWER*/
-
-*********************************************
-
-/*UPDATED VERSION OF WAI 2.1 OR HIGHER
-IMPORTANT DO NOT USE THE FOLLOWING IS YOU ARE USING WAI 2.0 OR LOWER
+/*If you dont have a addons folder in the dayz_server root, add one and put the following files in it
+skalisty_island_bridge.sqf
+skalisty_island_castle.sqf
+skalisty_island_road.sqf
+skalisty_island_wall.sqf
+skalisty_island_lottery.sqf
+spawn_box_skalisty_island.sqf
+/*
 Thanks to f3cuk and others for the work they put into to updating this part of the file
-
-If you do not want to use WAI, I have the DZAI set up, just email me and ask for SKALISTY DZAI SQF. Using DZAI will help with server lag
-WAI has the AI there all the time, where DZAI will only spawn the AI when someone gets within 500m+-
+For this mission I use DZAI for the ground units and the WAI for mounted guns, land vehicles, and air vehicles
+Using DZAI will help with server lag, DZAI will only spawn the AI when someone gets within 600m+-
+ -------------------------------------------------------------------------------------------------------------
  
-set these to true in the dayz_server\WAI\config.sqf at the bottom
+set the first one to true in the dayz_server\WAI\config.sqf at the bottom
     STATIC MISSIONS CONFIG
-		     static_missions			= true;		// use static mission file
+		     STATIC_MISSIONS			= TRUE;		// use static mission file
 			custom_per_world			= true;		// use a custom mission file per world
 
 	    END STATIC MISSIONS CONFIG */
@@ -132,10 +54,10 @@ You can set the number of ai and skill by changing the first number after the co
 you would simple change it to ,1,"medium" or another skill setting. the other skill settings are: easy, medium, hard, extreme, Random    the lower the AI the higher I would set the skill to.
 */
 
-/*  ++++    THE FOLLOWING IS WHAT YOU COPY AND PASTE FOR WAI 2.1 OR HIGHER in the dayz_server\WAI\static\chernarus.sqf
-			IF YOU USE THE DZAI cust_markers_chernarus.sqf AND cust_spawns_chernarus.sqf DO NOT USE THE Skalisty Island AI Spawn Points for ground troops BELOW
-*/
+ 
+			//THE DZAI cust_markers_chernarus.sqf AND cust_spawns_chernarus.sqf they are included
 
+ //THE FOLLOWING IS WHAT YOU COPY AND PASTE in the dayz_server\WAI\static\chernarus.sqf
 if(isServer) then {
 
 /*Skalisty Island M2s*/
@@ -145,53 +67,13 @@ if(isServer) then {
 [[[13771.2, 2969.66, 0.0014648], [13689.4, 2980.61, 0.00135422], [13731.9, 2897.92, 8.3882]],"M2StaticMG","extreme","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static;   
 [[[13694.1, 2901.4, 7.9924]],"Igla_AA_pod_TK_EP1","hard","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static; /*GROUND TO AIR ROCKET*/
 
-/*Skalisty Island AI Spawn Points for ground troops*/
-[[13671.355, 2892.8167, -1.5258789e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13671.355, 2892.8167, -1.5258789e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13741.079, 2945.6494, -9.5367432e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13691.315, 2857.7407, -3.8146973e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13729.353, 2856.2568, 3.4332275e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13730.628, 2812.7852, -0.00022125244],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13642.995, 2837.9001, 0.0001411438],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13829.32, 2923.4414, 6.4849854e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13895.181, 2988.3088, 0.00019454956],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13955.636, 3029.5244, 0.00057220459],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[14070.653, 2891.0085, -0.00090026855],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[14142.604, 2789.1985, 0.00060462952],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[14155.192, 2691.3687, 0.0002155304],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13990.835, 2788.1887, 0.00024223328],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13870.401, 2810.1841, -1.9073486e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13563.453, 2869.0381, 3.0517578e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13510.406, 2995.7441, 0.0013637543],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13428.791, 2792.6438, 4.7683716e-006],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13343.02, 2788.208, 0.0003452301],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13279.515, 2737.9275, -4.4822693e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13353.722, 2719.4685, 0.00062465668],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13419.333, 2747.3875, 0.00021457672],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13382.635, 2774.623, 0.00018024445],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13571.933, 3323.9666, 0.00010681152],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13485.479, 3338.3132, 9.1552734e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13487.625, 3380.8669, 0.00036621094],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13408.095, 3336.6536, -0.00019073486],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13377.609, 3288.2527, -0.0002784729],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13245.426, 3362.8286, -0.00010251999],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13214.415, 3246.9207, -0.0001335144],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13140.325, 3271.8738, 0.00052642822],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13064.684, 3258.4734, -5.7220459e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13112.573, 3197.2249, -0.00059127808],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13033.765, 3154.4763, 0.00037384033],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13109.765, 3132.3279, 0.00085258484],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13372.726, 3103.7449, 0.00038146973],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13467.485, 3107.6912, 9.6321106e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13472.39, 3004.0212, -0.00060558319],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13476.838, 2875.9968, -7.8201294e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13409.714, 2819.4358, 0.00013065338],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13991.87, 2889.8601, 8.9645386e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13576.669, 3073.3196, -0.00047302246],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13490.565, 3235.3242, 0.00017547607],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group; 
-[[13126.788, 3895.324, -1.5258789e-005],2,"easy","Random",4,"Random","Bandit2_DZ","Random","Bandit"] call spawn_group;  /*this line is for the ai that are on the main road North across from the island, if you dont want them just delete this line*/
-
 	diag_log "WAI: Static mission loaded";
 };
-/*If you do not want to use WAI I have the DZAI set up, just email me and ask for SKALISTY DZAI SQF. Using DZAI will help with server lag*/
-/*WAI has the AI there all the time, where DZAI will only spawn the AI when someone gets within 400m+-*/
+
+
+The DZAI FILES GO INTO AS FOLLOWS
+
+addons\dayz_server\DZAI\init\world_spawn_configs\custom_spawns\cust_spawns_chernarus.sqf
+
+addons\dayz_server\DZAI\init\world_spawn_configs\custom_markers\cust_markers_chernarus.sqf
+
