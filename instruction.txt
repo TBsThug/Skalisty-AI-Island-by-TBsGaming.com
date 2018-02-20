@@ -1,4 +1,5 @@
 https://github.com/TBsThug/Skalisty-AI-Island-by-TBsGaming.com
+/*
 Thanks to f3cuk,SnarkIndustries,oiad and others for the work they put into WAI and DZAI
 The bridge I used was made by etaCarinae aka denmark
 Mission was created by:
@@ -7,7 +8,7 @@ thug@tbsgaming.com
 tbsgaming.teamspeak3.com
 UPDATED 7/10/2015
 UPDATE  2/19/2018
-******************************This script is updated for Epoch 1.0.6.2 Chernarus***************************************
+******************************This script is updated for Epoch 1.0.6.2 Chernarus***************************************/
 
 IF YOU HAVE A BRIDGE THAT GOES TO THE ISLAND AND ITS NOT THE ONE INCLUDED, YOU MIGHT WANT TO REMOVE IT.
 Unpack your pbo and put the line below in the addons\dayz_server\init\server_functions.sqf at the very bottom
@@ -24,8 +25,6 @@ skalisty_island_wall.sqf
 skalisty_island_lottery.sqf
 skalisty_island_spawn_box.sqf
 
-NOTE: YOU WILL HAVE TO UPDATE THE skalisty_island_lottery.sqf and skalisty_island_spawn_box.sqf 
-	  Class names have changed and if you dont you will get errors.
 -------------------------------------------------------------------------------------------------------------
 
 For this mission I use DZAI for the ground units and WAI for mounted guns
@@ -61,5 +60,5 @@ EXAMPLE ["Skalisty1",3,2,false] call DZAI_spawn_units;  This will give you 3 AI 
 IF YOU HAVE A PROBLEM, go to the forum Epochmod
 https://epochmod.com/forum/topic/14594-ai-skalisty-island-not-so-easy/
 
-or come to my teamspeak tbsgaming.teamspeak3.com and ask for Thug
+or come to my teamspeak:  tbsgaming.teamspeak3.com and ask for Thug
 
