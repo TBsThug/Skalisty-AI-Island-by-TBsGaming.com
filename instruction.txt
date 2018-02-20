@@ -1,79 +1,65 @@
-/*First of all the bridge i used was made by etaCarinae aka denmark, also i used the WAI format to do the CustomSpawns.sqf
-and three weapon creates.Dont know who created it.
+/*
+Thanks to f3cuk,SnarkIndustries,oiad and others for the work they put into WAI and DZAI
+The bridge I used was made by etaCarinae aka denmark
+Mission was created by:
 Thug at TBsGaming.com
 thug@tbsgaming.com
 tbsgaming.teamspeak3.com
 UPDATED 7/10/2015
 UPDATE  2/19/2018
-******************************This script is updated for Chernarus 1.0.6.2***************************************
+******************************This script is updated for Epoch 1.0.6.2 Chernarus***************************************/
 
- IF YOU HAVE A BRIDGE THAT GOES TO THE ISLAND AND ITS NOT THE ONE INCLUDED, YOU MITE WANT TO REMOVE IT.
- Put the lines below in the dayz_server\init\server_functions.sqf at the very bottom*/
+IF YOU HAVE A BRIDGE THAT GOES TO THE ISLAND AND ITS NOT THE ONE INCLUDED, YOU MIGHT WANT TO REMOVE IT.
+Unpack your pbo and put the line below in the addons\dayz_server\init\server_functions.sqf at the very bottom
 
-[]execVM "\z\addons\dayz_server\buildings\skalisty_island_bridge.sqf";	//if you are going to use the wall around the island, use this bridge
+[]execVM "\z\addons\dayz_server\skalisty\skalisty_island_init.sqf";
 
-[]execVM "\z\addons\dayz_server\addons\skalisty_island_castle.sqf";	//this is the castle
+If you dont have a skalisty folder in the dayz_server root, add one and put the following files in it
 
-[]execVM "\z\addons\dayz_server\addons\skalisty_island_road.sqf";	//the road leading to the castle gate
-
-[]execVM "\z\addons\dayz_server\addons\skalisty_island_wall.sqf";	//this is the wall going around the island, if you use this there are 2 entrances
-
-[]execVM "\z\addons\dayz_server\addons\spawn_box_skalisty_island.sqf";	//the random boxes have to be reworked because of epoch 1.0.6.2 update
-
-[] execVM "\z\addons\dayz_server\addons\skalisty_island_lottery.sqf";	//The lotto boxes have to be reworked because of the epoch 1.0.6.2 update
-
-/*If you dont have a addons folder in the dayz_server root, add one and put the following files in it
+skalisty_island_init.sqf
 skalisty_island_bridge.sqf
 skalisty_island_castle.sqf
 skalisty_island_road.sqf
 skalisty_island_wall.sqf
 skalisty_island_lottery.sqf
-spawn_box_skalisty_island.sqf
-/*
-Thanks to f3cuk and others for the work they put into to updating this part of the file
-For this mission I use DZAI for the ground units and the WAI for mounted guns, land vehicles, and air vehicles
-Using DZAI will help with server lag, DZAI will only spawn the AI when someone gets within 600m+-
- -------------------------------------------------------------------------------------------------------------
- 
-set the first one to true in the dayz_server\WAI\config.sqf at the bottom
+skalisty_island_spawn_box.sqf
+https://github.com/TBsThug/Skalisty-AI-Island-by-TBsGaming.com
+NOTE: YOU WILL HAVE TO UPDATE THE skalisty_island_lottery.sqf and skalisty_island_spawn_box.sqf 
+	  Class names have changed and if you dont you will get errors.
+-------------------------------------------------------------------------------------------------------------
+
+For this mission I use DZAI for the ground units and WAI for mounted guns
+Using DZAI will help with server lag, The AI will only spawn when someone gets within 600m+- of the mission
+
+--------------------------------------------------------------------------------------------------------------
+Go to addons\dayz_server\WAI\config.sqf  At the bottom find the following STATIC_MISSIONS
+set to true, as shown below
+
     STATIC MISSIONS CONFIG
-		     STATIC_MISSIONS			= TRUE;		// use static mission file
+		     STATIC_MISSIONS			= true;		// use static mission file
 			custom_per_world			= true;		// use a custom mission file per world
 
-	    END STATIC MISSIONS CONFIG */
-
-	
-	
-	
-/*AI Skilisty Island      
-Copy and paste to the dayz_server\WAI\static\chernarus.sqf in the static folder
-
-IF YOU HAVE A PROBLEM, go to the forum or Teamspeak3    tbsgaming.teamspeak3.com and ask for Thug
-
-You can set the number of ai and skill by changing the first number after the cords and the skill level in this case it is  ,2,"easy"  Lets say you want to lower the number of ai and set the skill higher
-you would simple change it to ,1,"medium" or another skill setting. the other skill settings are: easy, medium, hard, extreme, Random    the lower the AI the higher I would set the skill to.
-*/
-
+	    END STATIC MISSIONS CONFIG
+--------------------------------------------------------------------------------------------------------------
  
-			//THE DZAI cust_markers_chernarus.sqf AND cust_spawns_chernarus.sqf they are included
+Put the file default.sqf that I have supplied into addons\dayz_server\WAI\static folder, replacing the one there.
+If you have information in your default.sqf then merge the two files
 
- //THE FOLLOWING IS WHAT YOU COPY AND PASTE in the dayz_server\WAI\static\chernarus.sqf
-if(isServer) then {
+--------------------------------------------------------------------------------------------------------------
 
-/*Skalisty Island M2s*/
-[[[13757, 2855.6951, 0.0001411438],[13581.159, 3095.7595, -0.00020980835],[13672.707, 2923.532, -1.5258789e-005],[13757.219, 2913.2258, 0.00010681152],[13803.734, 2948.77, 9.9182129e-005]],"M2StaticMG","extreme","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static;
-[[[13307.787, 2742.4548, 5.7220459e-005],[13473.531, 3343.7896, -2.2888184e-005],[13308.451, 3241.7668, 2.6702881e-005],[13631.521, 3237.97, 0.00017929077],[14165.316, 2696.0239, 8.2969666e-005]],"M2StaticMG","extreme","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static;
-[[[13720.18, 2841.2844, -4.196167e-005],[14085.578, 2942.03, 0.00035858154],[13598.758, 2932.2224, -0.0002784729],[12980.869, 3208.0649, 4.5776367e-005],[13526.065, 3475.8076, 1.0967255e-005]],"M2StaticMG","extreme","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static; 
-[[[13771.2, 2969.66, 0.0014648], [13689.4, 2980.61, 0.00135422], [13731.9, 2897.92, 8.3882]],"M2StaticMG","extreme","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static;   
-[[[13694.1, 2901.4, 7.9924]],"Igla_AA_pod_TK_EP1","hard","Bandit2_DZ","Bandit","Random",2,"Random","Random"] call spawn_static; /*GROUND TO AIR ROCKET*/
-
-	diag_log "WAI: Static mission loaded";
-};
-
-
-The DZAI FILES GO INTO AS FOLLOWS
+THE DZAI cust_markers_chernarus.sqf and cust_spawns_chernarus.sqf are included
+The DZAI files go into the following folders
 
 addons\dayz_server\DZAI\init\world_spawn_configs\custom_spawns\cust_spawns_chernarus.sqf
 
 addons\dayz_server\DZAI\init\world_spawn_configs\custom_markers\cust_markers_chernarus.sqf
+
+In the cust_spawns_chernarus.sqf you can set the number of AI by changing the first number in the following example.
+The second number is the skill level, you can use 1,2 or 3 easy, medium or hard
+EXAMPLE ["Skalisty1",3,2,false] call DZAI_spawn_units;  This will give you 3 AI and set their skill level to 2
+
+IF YOU HAVE A PROBLEM, go to the forum Epochmod
+https://epochmod.com/forum/topic/14594-ai-skalisty-island-not-so-easy/
+
+or come to my teamspeak tbsgaming.teamspeak3.com and ask for Thug
 
