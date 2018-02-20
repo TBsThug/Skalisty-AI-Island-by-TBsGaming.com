@@ -16,28 +16,27 @@ _vehicle_107 = objNull;
 		  clearMagazineCargoGlobal _this;
 
 		  
-		  _this addMagazineCargoGlobal ["ItemAmethyst",20];
-		  _this addMagazineCargoGlobal ["ItemTunaCooked",5];
+		  _this addMagazineCargoGlobal ["ItemObsidian",16];
+		  _this addMagazineCargoGlobal ["FishCookedTuna",5];
+          _this addMagazineCargoGlobal ["ItemSodaOrangeSherbet",5];		  
 		  _this addMagazineCargoGlobal ["ItemComboLock",2];
 		  _this addMagazineCargoGlobal ["ItemTinBar",2];
-		  _this addMagazineCargoGlobal ["ItemWoodStairs",2];
-		  _this addMagazineCargoGlobal ["cinder_wall_kit",2];
-		  _this addMagazineCargoGlobal ["CinderBlocks",6];
-		  _this addMagazineCargoGlobal ["metal_floor_kit",2];
-		  _this addMagazineCargoGlobal ["MortarBucket",2];
-		  _this addMagazineCargoGlobal ["PartPlywoodPack",5];
-		  _this addMagazineCargoGlobal ["PartPlankPack",5];
-		  _this addMagazineCargoGlobal ["ItemWoodWallLg",2];
-		  _this addMagazineCargoGlobal ["ItemWoodWallGarageDoor",2];
-          _this addMagazineCargoGlobal ["ItemSodaOrangeSherbet",5];
-		  _this addMagazineCargoGlobal ["Skin_SurvivorWurban_DZ",2];
+		  _this addMagazineCargoGlobal ["cinder_door_kit",2];
+		  _this addMagazineCargoGlobal ["half_cinder_wall_kit",4];
+		  _this addMagazineCargoGlobal ["full_cinder_wall_kit",6];
+		  _this addMagazineCargoGlobal ["metal_floor_kit",4];
+		  _this addMagazineCargoGlobal ["MortarBucket",3];
+		  _this addMagazineCargoGlobal ["CinderBlocks",9];
+		  _this addMagazineCargoGlobal ["cinder_door_kit",1];
+		  _this addMagazineCargoGlobal ["cinder_garage_kit",2];
+		  _this addMagazineCargoGlobal ["metal_panel_kit",4];
+		  _this addMagazineCargoGlobal ["fuel_pump_kit",1];
+		  _this addMagazineCargoGlobal ["light_pole_kit",2];
+		  _this addMagazineCargoGlobal ["storage_shed_kit",1];
+		  _this addMagazineCargoGlobal ["Itemfirebarrel_kit",1];
 		  _this addMagazineCargoGlobal ["Skin_SurvivorWpink_DZ",2];
-		  _this addMagazineCargoGlobal ["Skin_Priest_DZ",2];
-		  _this addMagazineCargoGlobal ["Skin_BanditW2_DZ",2];
-		  _this addMagazineCargoGlobal ["Skin_Graves_Light_DZ",2];
-		  _this addMagazineCargoGlobal ["Skin_CZ_Special_Forces_GL_DES_EP1_DZ",2];
-		  _this addMagazineCargoGlobal ["Bandit2_DZ",2];
-
+		  _this addMagazineCargoGlobal ["Skin_USMC_Soldier_Officer_DZ",2];		  
+		  _this addMagazineCargoGlobal ["Skin_FR_Marksman_DZ",2];		  
 };
 
 };
